@@ -1,0 +1,25 @@
+#Remember change the netID (zilongl) into your own netID for the first two lines below
+create database  zilongl_nba;
+use zilongl_nba;
+CREATE TABLE PLAYER (
+    `FNAME` VARCHAR(7) ,
+    `LNAME` VARCHAR(13) ,
+    `POSITION` VARCHAR(3) ,
+    `TEAM_NAME` VARCHAR(22) ,
+    `TEAM_STATE` VARCHAR(2) ,
+    `SALARY` INT
+);
+
+INSERT INTO PLAYER VALUES
+    ('Stephen','Curry',' PG','Golden State Warriors','CA',10000),
+    ('Stephen','Curry',' PG','Golden State Warriors','CA',10000),
+    ('Russell','Westbrook',' PG','Los Angeles Lakers','LA',47063478),
+    ('LeBron','James',' SF','Los Angeles Lakers','LA',44474988),
+    ('Kevin','Durant',' PF','Brooklyn Nets','NJ',44119845),
+    ('Bradley','Beal',' SG','Washington Wizards','DC',43279250),
+    ('Damian','Lillard',' PG','Portland Trail Blazers','OR',42492492),
+    ('Giannis','Antetokounmpo',' PF','Milwaukee Bucks','WI',42492492),
+    ('Kawhi','Leonard',' SF','LA Clippers','LA',42492492),
+    ('Paul','George',' SG','LA Clippers','LA',42492492),
+    ('Klay','Thompson',' SG','Golden State Warriors','CA',40600080),
+    ('LeBron','James',' SF','Los Angeles Lakers','LA',44474988);
