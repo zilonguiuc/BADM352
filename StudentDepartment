@@ -1,0 +1,28 @@
+#change the first two rows of netid into your own netID
+create database if not exists netid_school;
+use netid_school;
+CREATE TABLE DEPARTMENT(
+DEP_CODE INT(5),
+DEP_NAME VARCHAR(35),
+PRIMARY KEY(DEP_CODE)
+);
+
+CREATE TABLE STUDENT(
+STU_CODE INT(9),
+STU_LNAME VARCHAR(35),
+STU_FNAME VARCHAR(35),
+STU_EMAIL TEXT,
+DEP_CODE INT(5),
+PRIMARY KEY (STU_CODE),
+FOREIGN KEY (DEP_CODE) REFERENCES DEPARTMENT(DEP_CODE)
+);
+
+insert into DEPARTMENT values(00001, 'Business Admnistration'),
+(00002, 'Finance'),
+(00003, 'Accounting');
+
+insert into STUDENT values(10001, 'Mike','z', 'mikez@illinois.edu', '00002'),
+(10002, 'Lincoln','B', 'lincolnb@illinois.edu', 00001),
+(10003, 'Jack','G', 'jackg@llinois.edu', 00002),
+(10004, 'Henry','M', 'henrym@illinois.edu', 00003),
+(10005, 'Micah','B', 'Mmicahb@illinois.edu', 00001);
