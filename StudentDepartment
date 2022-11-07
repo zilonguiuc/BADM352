@@ -1,6 +1,8 @@
-#change the first two rows of netid into your own netID
+#change the first three rows of netid into your own netID
+drop database if exists netid_school;
 create database if not exists netid_school;
 use netid_school;
+
 CREATE TABLE DEPARTMENT(
 DEP_CODE INT(5),
 DEP_NAME VARCHAR(35),
