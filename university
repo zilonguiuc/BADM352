@@ -1,0 +1,26 @@
+Create database netid_school;
+use netid_school;
+CREATE TABLE DEPARTMENT(
+    DEP_CODE VARCHAR(10),
+    DEP_NAME VARCHAR(35),
+    PRIMARY KEY(DEP_CODE)
+);
+
+CREATE TABLE STUDENT(
+    STU_CODE INT,
+    STU_LNAME VARCHAR(35),
+    STU_FNAME VARCHAR(35),
+    STU_EMAIL TEXT,
+    DEP_CODE VARCHAR(10),
+    PRIMARY KEY (STU_CODE),
+    FOREIGN KEY (DEP_CODE) REFERENCES DEPARTMENT(DEP_CODE)
+);
+
+insert into DEPARTMENT values(‘BADM', 'Business Administration'),
+                             ('FIN', 'Finance'),
+                             ('ACCY', 'Accounting');
+
+insert into STUDENT values(10001, 'Mike', 'Z', 'mikez@illinois.edu', 'FIN'),
+                         (10002, 'Lincoln', 'B', 'lincolnb@illinois.edu', 'BADM'),
+                         (10004, 'Henry', 'M', 'henrym@illinois.edu', 'ACCY'),
+                         (10005, 'Micah', 'B', 'micahb@illinois.edu', 'BADM');
