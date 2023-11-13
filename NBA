@@ -1,4 +1,6 @@
 #Remember change the netID (zilongl) into your own netID for the first two lines below
+# the `` on column name is optional in SQL
+
 create database  netid_nba;
 use netid_nba;
 CREATE TABLE PLAYER (
